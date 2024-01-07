@@ -1,0 +1,139 @@
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f3ecec;
+  padding: 5px;
+  margin: 0;
+  background: #508dac;
+  font-family: Arial, sans-serif;
+}
+
+.upload_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.upload_button {
+  display: flex;
+  align-items: center;
+  padding: 8px 10px;
+  border-radius: 20px;
+  font-size: 17px;
+  border: none;
+  margin-left: 5px;
+  background: limegreen;
+  color: white;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.upload_button:hover {
+  background: coral;
+}
+
+.file-input {
+  opacity: 0;
+  width: 0.1px;
+  height: 0.1px;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.file-label {
+  background-color: #007bff;
+  color: #fff;
+  padding: 9px 13px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.file-label:hover {
+  background-color: #0056b3;
+}
+
+.file-label:active {
+  background-color: #003d80;
+}
+
+.divider {
+  margin-top: 5px;
+  height: 1px;
+  width: 100%;
+  background: white;
+}
+
+.video_container {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.videoElement {
+  width: 100%;
+  height: auto;
+}
+
+canvas {
+  position: absolute;
+ 
+}
+
+.play_pause_button {
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.play_pause_button button {
+  margin: 0 5px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background: rgb(230, 230, 120);
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  .upload_container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .upload_button {
+    margin-top: 10px;
+    margin-left: 0;
+  }
+
+  .divider {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .video_container {
+    margin: 10px auto;
+    overflow: hidden;
+  }
+}
